@@ -1,4 +1,5 @@
 import 'package:cal_c/ui/intro_screen/intro_screen_view.dart';
+import 'package:cal_c/ui/login_screen/login_screen_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -21,7 +22,12 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primaryColor: const Color(0xff12837A),
             ),
-            home: const IntroScreen(),
+            initialRoute: IntroScreen.id,
+            routes: {
+              IntroScreen.id: (context)=>IntroScreen(),
+              LoginView.id: (context)=>LoginView(),
+
+            },
           );
         });
   }
